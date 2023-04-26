@@ -13,7 +13,7 @@ package otherTask;
                 }
                 int countThree = 0;
                 while (countThree <= count ) {
-                    System.out.print(" *");
+                    System.out.print("*");
                     countThree = countThree + 1;
                 }
                 count = count + 2;

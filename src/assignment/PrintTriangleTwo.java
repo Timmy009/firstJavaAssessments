@@ -8,9 +8,10 @@ public class PrintTriangleTwo {
         while (count <= 5) {
             countTwo = 1;
             while (countTwo <= max) {
-                if (countTwo < count)
+                if (countTwo <= 5 - count )
                 {
                     System.out.print("  ");
+
                 } else {System.out.print(" *");}
                 countTwo++;
             }

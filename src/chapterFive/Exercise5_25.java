@@ -7,8 +7,10 @@ import java.util.Scanner;
             Scanner input = new Scanner(System.in);
             System.out.println("Enter an odd number between the range of 1 - 19");
             int count = 0;
-            int row = input.nextInt();
-            if (row <= 19 && row % 2 == 1) {
+            String row1 = input.nextLine();
+
+            if (row1.matches("^[1,3,5,7,9,11,13,15,17,19]+$")) {
+                int row = Integer.parseInt(row1);
                 while (count <= row) {
                     int countTwo = 0;
                     while (countTwo < row - count) {
@@ -40,7 +42,7 @@ import java.util.Scanner;
 
                     countFour = countFour + 2;
                 }}
-            else {System.out.println( row + " is outside the range");}
+            else {System.out.println("Invalid! " + row1 + " is outside the range");}
 
         }
     }

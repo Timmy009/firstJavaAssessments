@@ -16,12 +16,12 @@ public class Chapter4_38_2 {
         }
         int factorial = 1;
         int count = 1;
-        while (count >= number) {
-            factorial =  factorial * count;
+        while (count <= number) {
+            factorial = factorial * count;
             e = e + 1.0 / factorial;
             count++;
         }
-        System.out.println(e);
-        System.out.println("The factorial of " + number + " is " + factorial);
+
+        System.out.println("The e of " + number + " is " + e);
     }
 }
