@@ -11,6 +11,7 @@ public class PrintTriangleThree {
             while (countTwo <= count) {
                System.out.print(" *");
 
+
                 countTwo++;
             }
             System.out.println();
