@@ -13,7 +13,7 @@ public class Exercise6_30 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Guess the number between 1 and 1000");
         int guessNumber = scanner.nextInt();
-        int rand = 1 + random.nextInt(10);
+        int rand = 1 + random.nextInt(1000);
         int count = 1;
         while (guessNumber != rand) {
             if (guessNumber > rand) {
