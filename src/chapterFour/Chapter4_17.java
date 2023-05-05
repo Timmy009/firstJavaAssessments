@@ -10,7 +10,7 @@ import java.util.Scanner;
     Prompt the driver to enter the miles driven and the gallons used for each tankful
     collect and store the miles driven in a variable
     collect and store the gallons used in a variable
-    use the while loop to continusly collect the input from the user
+    use the while loop to continuously collect the input from the user
     calculate the miles per gallon for each trip
          */
         public static void main(String[] args) {

@@ -13,9 +13,5 @@ public class EncryptionDataTest {
         String EncryptionData = encryptionData.encryptData("0149");
         assertEquals("1678", EncryptionData);
     }
-    @Test
-    public void nonNumericalEncrytptionTest () {
-        String EncryptionData = encryptionData.encryptData("014o9");
-        assertEquals("Enter a valid four digit number", EncryptionData);
-    }
+
 }

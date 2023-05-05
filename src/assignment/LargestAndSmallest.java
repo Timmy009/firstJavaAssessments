@@ -1,5 +1,6 @@
 package assignment;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class LargestAndSmallest {
@@ -8,7 +9,7 @@ public class LargestAndSmallest {
         int number;
         int smallest = Integer.MAX_VALUE;
         int largest = Integer.MIN_VALUE;
-        boolean toContinue = false;
+        String toContinue;
         do {
             System.out.println("Enter number");
             number = input.nextInt();
@@ -18,11 +19,15 @@ public class LargestAndSmallest {
             if (number > largest) {
                 largest = number;
             }
-            System.out.println("Do you want to continue");
-            toContinue = input.nextBoolean();
+            System.out.println("Press enter to continue");
+            input.next();
+            toContinue = input.nextLine();
+            if (Objects.equals(toContinue, "quit")) {
+                break;
+            }
         }
-        while (toContinue);
-        System.out.println("The largest number is " + largest);
+        while (true);
+      System.out.println("The largest number is " + largest);
         System.out.println("The smallest number is " + smallest);
     }
 }
