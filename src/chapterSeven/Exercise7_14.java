@@ -1,13 +1,13 @@
 package chapterSeven;
 
 public class Exercise7_14 {
-    public static double average(int ...args) {
+    public static double average(int ...num) {
          double total = 0;
         double average = 0;
-        for (int count = 0; count < args.length; count++) {
-            total += args[count];
+        for (int count = 0; count < num.length; count++) {
+            total += num[count];
         }
-        average = total/args.length;
+        average = total/num.length;
         return average;
     }
 

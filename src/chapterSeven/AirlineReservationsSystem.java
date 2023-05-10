@@ -53,13 +53,17 @@ public class AirlineReservationsSystem {
     }
 
     private static int reserveSeatInFirstClass() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; isaBoolean(i); i++) {
             if (!seats[i]) {
                 seats[i] = true;
                 return i;
             }
         }
         return -1;
+    }
+
+    private static boolean isaBoolean(int i) {
+        return i < 5;
     }
 
     private static int reserveSeatInEconomy() {

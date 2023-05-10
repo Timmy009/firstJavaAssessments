@@ -11,6 +11,7 @@ public class ArrayImit {
         count[2] = 5;
         count [3] = 6;
         count[4] = 8;
+
         System.out.println(Arrays.toString(count));
     }
 }
