@@ -1,6 +1,6 @@
 package e_commerceProject;
 
 public class Items {
-    private Product [] quantityOfSelectedProduct;
-    private Product [] selectedProduct;
+    private double quantityOfSelectedProduct;
+    private Product selectedProduct;
 }
