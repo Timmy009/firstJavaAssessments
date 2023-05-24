@@ -25,7 +25,6 @@ public class ProblemTest {
     public void removeProblemTest () {
         person.addProblem(Type.EDUCATION);
         person.addProblem(Type.BUSINESS);
-        person.solveProblem(Type.EDUCATION);
-        assertEquals("[BUSINESS]", person.getProblem());
+        person.solveProblem(Type.EDUCATION); assertEquals("[BUSINESS]", person.getProblem());
     }
 }
