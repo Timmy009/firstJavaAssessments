@@ -4,7 +4,6 @@ import listToArray.MyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -68,6 +67,13 @@ public class MyListTest {
         assertEquals(null, myList.getElement(2));}
 
 
+    @Test public void removTwoeTest() {
+        myList.add(2, "esther");
+        myList.add(3, "timi");
+        myList.add(4, "tboy");
+        assertEquals(3, myList.getSize());
+        myList.remove("esther");
+        assertEquals(null, myList.getElement(2));}
 
     @Test public void setTest() {
         myList.set(3, "timi");
@@ -141,6 +147,6 @@ public class MyListTest {
         assertTrue(myList.contains("david"));
     }
 
-
+//@Test public containA
         }
 

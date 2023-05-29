@@ -1,20 +1,17 @@
 package listToArray;
 
-import java.util.ArrayList;
-
 public class MyList {
 
-    String [] list;
+    Object [] list;
     private int size;
     private final int INITIAL_CAPACITY = 10;
 
     public MyList() {
         list = new String[INITIAL_CAPACITY];
-        ArrayList <Integer> arr = new ArrayList<>();
 
     }
 
-    public void add(int index, String element) {
+    public void add(int index, Object element) {
         if (index == size) {
             resizeArray();
       }
@@ -22,21 +19,37 @@ public class MyList {
             size++;
     }
 
+    public void add(Object element) {
+        list[size] = element;
+        size++;
+    }
+
+    public void remove(Object element) {
+        for (int count = 0; count < list.length; count++) {
+            if (list[count] == element) {
+                list[count] = null;
+                break;
+            }
+        }
+        size--;
+
+    }
+
 
     private void resizeArray () {
-        String [] newList = new String[list.length * 2];
+        Object [] newList = new Object [list.length * 2];
         for (int count = 0; count < newList.length; count++) {
             newList[count] = list[count];
         }
         list = newList;
     }
 
-    public String getElement(int index) {
+    public Object getElement(int index) {
         return list[index];
 
     }
 
-    public void addAll(int index, String[] arrayTwo) {
+    public void addAll(int index, Object[] arrayTwo) {
        for (int count = index; count < list.length; count++) {
             add(count, arrayTwo[count]);
         }
@@ -55,14 +68,15 @@ public class MyList {
 
     public void remove(int index) {
             list[index] = null;
+            size--;
         }
 
 
-    public void set(int index, String element) {
+    public void set(int index, Object element) {
         list[index] = element;
     }
 
-    public int indexOf(String element) {
+    public int indexOf(Object element) {
         for (int count = 0; count < list.length; count++) {
             if (list[count] == element) {
                 return count;
@@ -73,7 +87,7 @@ public class MyList {
         return -1;
     }
 
-    public int lastIndexOf(String element) {
+    public int lastIndexOf(Object element) {
         for (int count = list.length -1; count >= 0; count--) {
             if (list[count] == element) {
                 return count;
@@ -85,8 +99,8 @@ public class MyList {
 
     }
 
-    public boolean equalsTo(String element) {
-        for (String name : list) {
+    public boolean equalsTo(Object element) {
+        for (Object name : list) {
             if (name == element) {
                 return true;
             }
@@ -98,8 +112,8 @@ public class MyList {
         return size == 0;
     }
 
-    public boolean contains(String element) {
-            for (String name : list) {
+    public boolean contains(Object element) {
+            for (Object name : list) {
                 if (name == element) {
                     return true;
                 }

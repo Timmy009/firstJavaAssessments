@@ -6,7 +6,7 @@ public class Gist {
     private int id;
     private String title;
     private String body;
-    private LocalDateTime dateCreated;
+    private LocalDateTime dateCreated = LocalDateTime.now();
 
     public Gist(String title, String body) {
         this.title = title;

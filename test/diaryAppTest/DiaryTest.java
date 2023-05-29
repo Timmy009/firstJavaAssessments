@@ -50,7 +50,7 @@ public class DiaryTest {
         assertFalse(diary.isLocked());
         diary.addGist("My day", "Welcom oh");
         diary.addGist("My Week", "I will be there");
-        diary.deleteGist(1);
+        diary.deleteGist("My Week");
         assertEquals(1, diary.gistCount());
     }
 
@@ -62,7 +62,7 @@ public class DiaryTest {
         diary.unlockDiaryWith("password");
         assertFalse(diary.isLocked());
         diary.addGist("My Week", "I will be there");
-        diary.deleteGist(1);
+        diary.deleteGist("My Week");
         assertEquals(0, diary.gistCount());
     }
 
@@ -84,5 +84,16 @@ public class DiaryTest {
         diary.updateEntry(1, "Today", "I am fine");
         Gist body = diary.findGistByTitle("Today");
         assertEquals("I am fine", body.getBody());
+    }
+
+    @Test public void createdGistCanHaveTimeStamp () {
+        diary.unlockDiaryWith("password");
+        assertFalse(diary.isLocked());
+        diary.addGist("My day", "Welcom oh");
+        diary.addGist("My Week", "I will be there");
+        Gist body = diary.findGistByTitle("My day");
+        assertNotNull(body.getDateCreated());
+
+
     }
 }

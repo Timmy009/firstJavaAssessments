@@ -48,11 +48,11 @@ public int gistCount() {
         return passWord;
     }
 
-    public void deleteGist (int id) {
+    public void deleteGist (String title) {
     boolean diaryIsUnlocked = !isLocked;
     if (diaryIsUnlocked) {
     for (Gist gist: gists) {
-        if (gist.getId()==(id)) {
+        if (gist.getTitle()==(title)) {
             gists.remove(gist);
             break;
 
