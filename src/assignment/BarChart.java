@@ -4,7 +4,13 @@ import java.util.Scanner;
 
 public class BarChart {
 
+
             public static void main(String[] args) {
+                String me = "jkdj";
+                System.out.println(me.getClass());
+
+
+
                 Scanner input = new Scanner(System.in);
                 int number = 0;
                 int maxNumber = 5;

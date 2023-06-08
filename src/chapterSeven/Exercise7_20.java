@@ -4,8 +4,6 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 public class Exercise7_20 {
-
-
     public static void main(String[] args) {
         SecureRandom secureRandom = new SecureRandom();
         int [][] archeryGame = new int[4][3];
@@ -17,11 +15,11 @@ public class Exercise7_20 {
         int highestPlayer  = 1;
 
         for (int players = 0; players < archeryGame.length; players++) {
-        for (int chances = 0; chances < archeryGame[0].length; chances++) {
+        for (int chances = 0; chances < archeryGame[players].length; chances++) {
             archeryGame[players][chances] = secureRandom.nextInt(10);}
     }
 
-        System.out.println(Arrays.deepToString(archeryGame));
+
         System.out.println("Players Chance 1    Chance 2    Chance 3       Total");
     for (int count = 0; count < archeryGame.length; count++){
         System.out.print(count + "           " );

@@ -2,6 +2,7 @@ package otherTask;
 
 public class ArgsList {
 
+
         public static int sum(int ...num) {
             int total = 0;
             for (int number : num) {

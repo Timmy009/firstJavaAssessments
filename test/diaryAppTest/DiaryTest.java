@@ -93,7 +93,5 @@ public class DiaryTest {
         diary.addGist("My Week", "I will be there");
         Gist body = diary.findGistByTitle("My day");
         assertNotNull(body.getDateCreated());
-
-
     }
 }

@@ -7,7 +7,8 @@ public class Cylinder {
 private int radius;
 private int height;
 
-        public Cylinder() {
+
+public Cylinder() {
     radius = 1;
     height = 1;
         }

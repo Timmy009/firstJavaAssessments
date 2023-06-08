@@ -44,4 +44,14 @@ public class Gist {
     public void setDateCreated(LocalDateTime dateCreated) {
         this.dateCreated = dateCreated;
     }
+
+    @Override
+    public String toString() {
+        return "Gist{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", dateCreated=" + dateCreated +
+                '}';
+    }
 }
